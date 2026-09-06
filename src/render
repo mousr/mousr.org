@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+require 'Page.php';
+
+glob(dirname(__DIR__) . '/public/*.html')
+    |> (fn ($array) => array_walk($array, fn (string $path) => unlink($path)));
+
+foreach (glob(dirname(__DIR__) . '/pages/*.md') as $page) {
+    $markdown = file_get_contents($page);
+    if ($markdown === false) {
+        throw new RuntimeException();
+    }
+
+    $html = new \Mousr\Templates\Renderer(__DIR__)
+        ->toString(
+            __DIR__ . '/layout.html.php',
+            new Page(
+                $renderedMarkdown = new \League\CommonMark\CommonMarkConverter()
+                    ->convert($markdown)
+                    ->getContent()
+            ),
+        );
+
+    file_put_contents(str_replace(['pages', '.md'], ['public', '.html'], $page), $html);
+}

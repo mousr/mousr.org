@@ -1,7 +1,10 @@
+<?php declare(strict_types=1);
+\Mousr\Templates\Assert::template($renderer, $escaper, $context, Page::class);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="<?= $escaper->attr($escaper->encoding) ?>">
     <link rel="stylesheet" href="main.css">
     <title>Mousr | small PHP components that can scare an ElePHPant</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -16,7 +19,7 @@
       </nav>
     </header>
     <main>
-      <h1>Coming soon</h1>
+        <?= $context->renderedMarkdown ?>
     </main>
     <footer>
     </footer>

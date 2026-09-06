@@ -1,0 +1,10 @@
+{
+    "name": "mousr/mousr.org",
+    "description": "The source code for mousr.org",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "mousr/templates": "dev-main",
+        "league/commonmark": "^2.10"
+    }
+}
