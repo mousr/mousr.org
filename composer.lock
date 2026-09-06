@@ -1250,12 +1250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mousr/templates-phpstan-extension.git",
-                "reference": "157e51ab5aae6a06ebee01e8d34d7072c8f37166"
+                "reference": "e92e07fa50fd294a083c33448fe292bb8a636f1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mousr/templates-phpstan-extension/zipball/157e51ab5aae6a06ebee01e8d34d7072c8f37166",
-                "reference": "157e51ab5aae6a06ebee01e8d34d7072c8f37166",
+                "url": "https://api.github.com/repos/mousr/templates-phpstan-extension/zipball/e92e07fa50fd294a083c33448fe292bb8a636f1c",
+                "reference": "e92e07fa50fd294a083c33448fe292bb8a636f1c",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1293,7 @@
                 "issues": "https://github.com/mousr/templates-phpstan-extension/issues",
                 "source": "https://github.com/mousr/templates-phpstan-extension/tree/main"
             },
-            "time": "2026-09-01T18:51:29+00:00"
+            "time": "2026-09-06T18:53:36+00:00"
         },
         {
             "name": "phpstan/phpstan",
