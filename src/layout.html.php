@@ -19,7 +19,7 @@
       </nav>
     </header>
     <main>
-      <?= trim(str_replace(PHP_EOL, PHP_EOL . '      ', $context->renderedMarkdown)) . PHP_EOL ?>
+      <?= $context->renderedMarkdown ?>
     </main>
     <footer>
     </footer>

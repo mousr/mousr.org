@@ -17,9 +17,15 @@ foreach (glob(dirname(__DIR__) . '/pages/*.md') as $page) {
         ->toString(
             __DIR__ . '/layout.html.php',
             new Page(
-                $renderedMarkdown = new \League\CommonMark\CommonMarkConverter()
-                    ->convert($markdown)
-                    ->getContent()
+                trim(
+                    str_replace(
+                        PHP_EOL,
+                            PHP_EOL . '      ',
+                        $renderedMarkdown = new \League\CommonMark\CommonMarkConverter()
+                            ->convert($markdown)
+                            ->getContent()
+                    ),
+                ) . PHP_EOL,
             ),
         );
 
